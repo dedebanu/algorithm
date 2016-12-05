@@ -4,7 +4,7 @@ int a[20];
 void nq(int a[],int n,int r)
 {       
 int i,j,legal;
-       if(r==n+1)
+       if(r==n+1&&n>3)
        {
                 for(i=1;i<=n;i++)
                 {
@@ -19,7 +19,7 @@ int i,j,legal;
                         legal=1;
                         for(i=1;i<=r-1;i++)
                         {
-                                if((a[i]==j)||(a[i]==(r-j+i))||(a[i]==(r+j-i)))
+                                if((a[i]==j)||(a[i]-i)==(r-j))||(a[i]+i)==(r+j)))
                                 {
                                         legal=0;
                                 }
